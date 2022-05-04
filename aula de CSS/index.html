@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display flex </title>
+    <style>
+        .flex{
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex;
+        }
+        .item{
+            background-color: #EB84D6;
+            margin: 5px;
+            height: 50%;
+            text-align: center;
+         
+        }
+        .flex-container{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+        .flex-item{
+            background: #B765D3;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            color: aliceblue;
+            text-align: center;
+            margin: 5px;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        .row-reverse li{
+            background-color: lightblue;
+        }
+        .column{
+            float: left;
+            flex-direction: column;
+        }
+        .column li{
+            background: coral;
+        }
+        .column-reverse{
+            float: right;
+            flex-direction: column-reverse;
+        }
+        .column-reverse li{
+            background: lightgreen;
+        }
+        .gray{
+            background-color: lightgray;
+        }
+        .red{
+            background-color: lightcoral;
+        }
+        .pink{
+            background-color: lightpink;
+        }
+        .flex-container1{
+            display: flex;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 300px;
+            flex-direction: column;
+        }
+        .item1{
+            font-size: 24px;
+            min-width: 100px;
+            line-height: 50px;
+            text-align: center;
+            height: 50%;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+    <ul class="flex-container row">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    <ul class="flex-container row-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    <ul class="flex-container column">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    <ul class="flex-container column-reverse">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+    <h1>no wrap</h1>
+    <div class="flex-container1 nowrap">
+        <div class="item1 gray">1</div>
+        <div class="item1 pink">2</div>
+        <div class="item1 red">3</div>
+        <div class="item1 red">4</div>
+    </div>
+    <h1>wrap</h1>
+    <div class="flex-container1 wrap">
+        <div class="item1 gray">1</div>
+        <div class="item1 pink">2</div>
+        <div class="item1 red">3</div>
+        <div class="item1 red">3</div>
+    </div>
+    <hi>wrap-reverse</hi>
+    <div class="flex-container1 wrap-reverse">
+        <div class="item1 gray">1</div>
+        <div class="item1 pink">2</div>
+        <div class="item1 red">3</div>
+        <div class="item1 red">3</div>
+    </div>
+</body>
+</html>
